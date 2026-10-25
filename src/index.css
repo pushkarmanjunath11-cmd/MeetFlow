@@ -1,0 +1,120 @@
+:root {
+  /* Surfaces */
+  --bg-app: #0a0a0d;
+  --bg-canvas: #0d0e13;
+  --bg-surface: #13141b;
+  --bg-surface-raised: #181a23;
+  --bg-sunken: #0a0b10;
+  --bg-overlay: rgba(6, 6, 9, 0.72);
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-accent: rgba(139, 109, 255, 0.35);
+
+  /* Text */
+  --text-h: #f3efe6;
+  --text: #c7c9d4;
+  --text-muted: #868a9b;
+  --text-faint: #5b5e6d;
+
+  /* Accents */
+  --violet: #8b6dff;
+  --violet-strong: #7452ff;
+  --violet-soft: rgba(139, 109, 255, 0.14);
+  --violet-border: rgba(139, 109, 255, 0.4);
+  --cyan: #5fd4e0;
+  --cyan-soft: rgba(95, 212, 224, 0.14);
+
+  /* Status */
+  --success: #4fd1a0;
+  --success-soft: rgba(79, 209, 160, 0.12);
+  --warn: #e3a855;
+  --warn-soft: rgba(227, 168, 85, 0.13);
+  --danger: #ea6a6a;
+  --danger-soft: rgba(234, 106, 106, 0.12);
+
+  /* Radii / shadow */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 24px 48px -32px rgba(0, 0, 0, 0.65);
+  --shadow-pop: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 32px 64px -24px rgba(0, 0, 0, 0.75);
+
+  /* Type */
+  --sans: 'Segoe UI', -apple-system, system-ui, Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', Consolas, 'SF Mono', monospace;
+
+  font: 15px/1.55 var(--sans);
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg-app);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-app);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  color-scheme: dark;
+}
+
+::selection {
+  background: var(--violet-soft);
+  color: var(--text-h);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
